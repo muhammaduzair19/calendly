@@ -5,8 +5,10 @@ import { Button } from "./ui/button";
 import { PenBox } from "lucide-react";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import UserMenu from "./user-menu";
+import { checkUser } from "@/lib/checkuser";
 
-const Header = () => {
+const Header = async () => {
+    await checkUser();
     return (
         <nav className="mx-auto py-2 px-4 flex justify-between items-center shadow-md border-b-2">
             <Link href="/" className="flex items-center">
@@ -16,7 +18,7 @@ const Header = () => {
                 <Link href="/events?create=true">
                     <Button className="flex items-center gap-2">
                         <PenBox size={16} />
-                        Create Event
+                        <p className="hidden md:block"> Create Event</p>
                     </Button>
                 </Link>
                 <SignedOut>

@@ -42,7 +42,7 @@ const howItWorks = [
 export default function Home() {
     return (
         <main className="container px-4 mx-auto py-16">
-            <div className="flex flex-col justify-between lg:flex-row items-center gap-12 mb-24 mx-auto">
+            <div className="flex flex-col justify-between lg:flex-row items-center gap-6 mb-24 mx-auto">
                 <div className="lg:w-1/2">
                     <h1 className="text-7xl font-extrabold pb-6 gradient-title">Simplify Your Scheduling</h1>
                     <p className="text-xl text-gray-600 mb-10">

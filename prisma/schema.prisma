@@ -14,17 +14,17 @@ datasource db {
 }
 
 model User {
-  id          String        @id @default(uuid())
-  clerkUserId String        @unique
-  email       String        @unique
-  username    String        @unique
-  name        String?
-  imageUrl    String?
-  events      Event[]       @relation("UserEvents")
-  bookings    Booking[]     @relation("UserBookings")
-  availabilty Availability?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+  id           String        @id @default(uuid())
+  clerkUserId  String        @unique
+  email        String        @unique
+  username     String        @unique
+  name         String?
+  imageUrl     String?
+  events       Event[]       @relation("UserEvents")
+  bookings     Booking[]     @relation("UserBookings")
+  availability Availability?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 }
 
 model Event {
